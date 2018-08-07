@@ -2,6 +2,7 @@
   wait_for:
     port: 8080
     delay: 5
+    host: "{{ keycloak_host }}"
 
 - name: Initialize python library to run keycloak bootstrap script
   shell: cd {{ role_path }}/files/python-keycloak-0.12.0 && python setup.py install
